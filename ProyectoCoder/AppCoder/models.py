@@ -16,13 +16,13 @@ class Estudiante(models.Model):
     apeliido = models.CharField (max_length=30)
     email = models.EmailField()
 
-class Profesor (models.Model):
+class Profesor(models.Model):
     nombre = models.CharField (max_length=40)
     apellido = models.CharField (max_length=40)
     email = models.EmailField()
     profesion = models.CharField (max_length=40)
 
-class Entregable (models.Model):
+class Entregable(models.Model):
     nombre = models.CharField (max_length=40)
     fechaDelEntregable = models.DateField()
     entregado = models.BooleanField()   
