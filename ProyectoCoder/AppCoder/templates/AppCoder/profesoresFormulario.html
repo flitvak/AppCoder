@@ -1,0 +1,32 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% load static %}
+
+
+        {% block contenido2 %}
+            <h1 class="mb-1">Formulario de profesores</h1>
+        {% endblock %}
+
+
+
+
+        {% block contenido %}
+
+            <h1>Este es el parrafo del formulario de profesores</h1>
+
+            <form action="/AppCoder/profesoresFormulario" method = "POST">{% csrf_token %}
+
+                <p>Nombre del profesor: <input type="text" name="nombre"> </p>
+
+                <p>Apellido del profesor: <input type="text" name="apellido"> </p>
+
+                <p>E-mail: <input type="email" name="email"> </p>
+
+                <p>Profesión: <input type="text" name="profesion"> </p>
+
+
+                <input type="submit" value="Guardar"> 
+
+            </form>
+
+        {% endblock %}
